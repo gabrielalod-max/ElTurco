@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Turco Pesca | Equipamiento de Pesca y Caza</title>
+    <!-- Tailwind configuration and CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-brand-sand text-brand-slate antialiased">
+
+    <!-- Top Bar Notice -->
+    <div class="bg-brand-slate text-gray-300 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-shield-halved text-brand-orange mr-1"></i> Garantía oficial</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#contacto" class="hover:text-brand-orange transition-colors"><i class="fa-solid fa-location-dot mr-1"></i> Locales</a>
+                <span>|</span>
+                <a href="#contacto" class="hover:text-brand-orange transition-colors"><i class="fa-solid fa-headset mr-1"></i> Asesoramiento</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-blue-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="scrollToSection('hero')">
+                    <div class="w-12 h-12 bg-brand-orange text-white flex items-center justify-center rounded-lg shadow-md font-bold text-2xl">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading text-2xl font-bold tracking-wider uppercase block text-white">EL TURCO PESCA</span>
+                        <span class="text-xs text-gray-300 tracking-widest uppercase block -mt-1 font-sans">Outdoor, Caza & Pesca</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex space-x-6 text-sm font-medium tracking-wide">
+                    <a href="#hero" class="text-white hover:text-brand-orange transition-colors py-2">INICIO</a>
+                    <div class="relative group py-2 cursor-pointer">
+                        <a href="#catalogo" class="text-white group-hover:text-brand-orange transition-colors flex items-center gap-1">
+                            PESCA <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </a>
+                        <!-- Mega Menu Dropdown mock -->
+                        <div class="absolute left-0 top-full hidden group-hover:block w-64 bg-brand-darkOlive text-white shadow-xl rounded-b-lg border-t-2 border-brand-orange p-4 z-50">
+                            <a href="#catalogo" class="block py-1.5 px-2 hover:bg-brand-olive rounded text-gray-200 hover:text-brand-orange text-xs"><i class="fa-solid fa-fish mr-2"></i> Cañas y Reeles</a>
+                            <a href="#catalogo" class="block py-1.5 px-2 hover:bg-brand-olive rounded text-gray-200 hover:text-brand-orange text-xs"><i class="fa-solid fa-water mr-2"></i> Señuelos y Líneas</a>
+                            <a href="#catalogo" class="block py-1.5 px-2 hover:bg-brand-olive rounded text-gray-200 hover:text-brand-orange text-xs"><i class="fa-solid fa-box-archive mr-2"></i> Cajas y Accesorios</a>
+                        </div>
+                    </div>
+                    <div class="relative group py-2 cursor-pointer">
+                        <a href="#catalogo" class="text-white group-hover:text-brand-orange transition-colors flex items-center gap-1">
+                            CAZA <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="absolute left-0 top-full hidden group-hover:block w-64 bg-brand-darkOlive text-white shadow-xl rounded-b-lg border-t-2 border-brand-orange p-4 z-50">
+                            <a href="#catalogo" class="block py-1.5 px-2 hover:bg-brand-olive rounded text-gray-200 hover:text-brand-orange text-xs"><i class="fa-solid fa-crosshairs mr-2"></i> Óptica y Miras</a>
+                            <a href="#catalogo" class="block py-1.5 px-2 hover:bg-brand-olive rounded text-gray-200 hover:text-brand-orange text-xs"><i class="fa-solid fa-utensils mr-2 font-thin"></i> Cuchillería Fina</a>
+                            <a href="#catalogo" class="block py-1.5 px-2 hover:bg-brand-olive rounded text-gray-200 hover:text-brand-orange text-xs"><i class="fa-solid fa-bullseye mr-2"></i> Rifles</a>
+                        </div>
+                    </div>
+                    <a href="#catalogo" class="text-white hover:text-brand-orange transition-colors py-2">OUTDOOR & ACCESORIOS</a>
+                    <a href="#nosotros" class="text-white hover:text-brand-orange transition-colors py-2">NOSOTROS</a>
+                    <a href="#ofertas" class="text-brand-orange font-bold hover:underline py-2">OFERTAS</a>
+                </nav>
+
+                <!-- Search & Cart Action Icons -->
+                <div class="flex items-center gap-4">
+                    <div class="relative hidden sm:block">
+                        <input type="text" placeholder="Buscar cañas, miras, accesorios..." class="bg-brand-darkOlive text-white text-xs rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-brand-orange w-48 md:w-64 placeholder-gray-400">
+                        <button class="absolute right-3 top-2.5 text-gray-400 hover:text-brand-orange">
+                            <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Cart Trigger -->
+                    <button onclick="toggleCartModal()" class="relative bg-brand-darkOlive p-2.5 rounded-full text-white hover:text-brand-orange transition-colors">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-badge" class="absolute -top-1 -right-1 bg-brand-orange text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                    </button>
+
+                    <!-- Mobile Menu Toggle Button -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden text-white p-2 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-darkOlive border-t border-gray-700 px-4 py-4 space-y-3">
+            <input type="text" placeholder="Buscar equipamiento..." class="w-full bg-brand-olive text-white text-sm rounded-lg py-2 px-4 mb-3">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block text-white font-medium py-1">Inicio</a>
+            <a href="#catalogo" onclick="toggleMobileMenu()" class="block text-white font-medium py-1">Pesca (Cañas & Reeles)</a>
+            <a href="#catalogo" onclick="toggleMobileMenu()" class="block text-white font-medium py-1">Caza (Óptica & Cuchillería)</a>
+            <a href="#catalogo" onclick="toggleMobileMenu()" class="block text-white font-medium py-1">Camping & Indumentaria</a>
+            <a href="#nosotros" onclick="toggleMobileMenu()" class="block text-white font-medium py-1">Sobre Nosotros</a>
+            <a href="#ofertas" onclick="toggleMobileMenu()" class="block text-brand-orange font-bold py-1">Ofertas Destacadas</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="bg-hero relative min-h-[85vh] flex items-center justify-center text-white text-center px-4 py-20">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <span class="inline-block bg-brand-orange/90 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-2">
+                <i class="fa-solid fa-mountain mr-1"></i> Rendimiento en estado salvaje
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-tight font-heading">
+                TODO PARA TU PROXIMA AVENTURA
+            </h1>
+            <p class="text-base sm:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
+                Diseñado por expertos y probado en la naturaleza salvaje. Encontrá la máxima precisión en cañas, reeles, ópticas e indumentaria técnica.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <a href="#catalogo" class="bg-brand-orange hover:bg-brand-orangeHover text-white font-semibold px-8 py-4 rounded-lg shadow-lg uppercase text-sm tracking-wider transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-compass mr-2"></i> Explorar Catálogo
+                </a>
+                <a href="https://wa.me/5493412126340" target="_blank" class="bg-transparent hover:bg-white/10 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg uppercase text-sm tracking-wider transition-all flex items-center justify-center">
+                    <i class="fa-brands fa-whatsapp text-green-400 text-lg mr-2"></i> Asesoramiento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORÍAS POPULARES -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-end mb-8 border-b border-gray-300 pb-4">
+            <div>
+                <span class="text-brand-orange uppercase text-xs font-bold tracking-widest">Nuestra Colección</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading uppercase text-brand-slate">Categorías Populares</h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <!-- Cat 1 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-md h-80 bg-gray-900 cursor-pointer" onclick="filterPopularCategory('pesca')">
+                <img src="imagenes/pesca.jpg" alt="Pesca" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                    <span class="text-brand-orange text-xs uppercase font-bold tracking-wider">Equipamiento de Agua</span>
+                    <h3 class="text-2xl font-bold font-heading text-white">PESCA DEPORTIVA</h3>
+                    <p class="text-xs text-gray-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Cañas, reeles, líneas y multifilamentos</p>
+                </div>
+            </div>
+            <!-- Cat 2 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-md h-80 bg-gray-900 cursor-pointer" onclick="filterPopularCategory('caza')">
+                <img src="imagenes/m60.jpg" alt="Óptica" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                    <span class="text-brand-orange text-xs uppercase font-bold tracking-wider">Precisión Visual</span>
+                    <h3 class="text-2xl font-bold font-heading text-white">ÓPTICA & CAZA</h3>
+                    <p class="text-xs text-gray-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Miras telescópicas, binoculares y visores</p>
+                </div>
+            </div>
+            <!-- Cat 3 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-md h-80 bg-gray-900 cursor-pointer" onclick="filterPopularCategory('cuchillos')">
+                <img src="imagenes/cuchillo.jpg?auto=format&fit=crop&w=600&q=80" alt="Cuchillería" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                    <span class="text-brand-orange text-xs uppercase font-bold tracking-wider">Acero Inoxidable</span>
+                    <h3 class="text-2xl font-bold font-heading text-white">CUCHILLERÍA </h3>
+                    <p class="text-xs text-gray-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Cuchillos de monte, tácticos y de supervivencia</p>
+                </div>
+            </div>
+            <!-- Cat 4 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-md h-80 bg-gray-900 cursor-pointer" onclick="filterPopularCategory('indumentaria')">
+                <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=600&q=80" alt="Camping & Indumentaria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                    <span class="text-brand-orange text-xs uppercase font-bold tracking-wider">Protección Climática</span>
+                    <h3 class="text-2xl font-bold font-heading text-white">CAMPING & INDUMENTARIA</h3>
+                    <p class="text-xs text-gray-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Camperas térmicas, botas de vadeo y borcegos</p>
+                </div>
+            </div>
+            <!-- Cat 5 -->
+            <div id="ofertas" class="group relative overflow-hidden rounded-xl shadow-md h-80 bg-gray-900 cursor-pointer" onclick="filterPopularCategory('ofertas')">
+                <img src="https://images.unsplash.com/photo-1526304640588-c469d2b8819f?auto=format&fit=crop&w=600&q=80" alt="Ofertas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                    <span class="text-brand-orange text-xs uppercase font-bold tracking-wider">Descuentos del Mes</span>
+                    <h3 class="text-2xl font-bold font-heading text-white">OFERTAS</h3>
+                    <p class="text-xs text-gray-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Rebajas exclusivas en equipamiento y combos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-sand py-12 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <span class="text-brand-orange uppercase text-xs font-bold tracking-widest">Promociones</span>
+                    <h2 class="text-3xl font-bold font-heading uppercase text-brand-slate">Ofertas destacadas</h2>
+                </div>
+                <button onclick="filterCategory('ofertas')" class="bg-brand-orange hover:bg-brand-orangeHover text-white font-semibold px-5 py-3 rounded-lg uppercase text-xs tracking-wider transition-colors">Ver ofertas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOGO CON FILTROS INTERACTIVOS -->
+    <section id="catalogo" class="bg-white py-16 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold font-heading text-brand-slate uppercase">Catálogo de Productos Destacados</h2>
+                <p class="text-gray-600 text-sm mt-2">Utiliza los filtros de alta precisión para seleccionar el equipamiento ideal para tu próxima expedición.</p>
+            </div>
+
+            <!-- Filter Controls Panel -->
+            <div class="bg-brand-sand p-6 rounded-xl mb-10 shadow-inner flex flex-wrap gap-4 items-center justify-between">
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterCategory('all')" id="btn-all" class="filter-btn active bg-brand-olive text-white px-4 py-2 rounded-lg text-xs font-semibold uppercase">Todos</button>
+                    <button onclick="filterCategory('pesca')" id="btn-pesca" class="filter-btn bg-white text-brand-slate hover:bg-brand-olive hover:text-white px-4 py-2 rounded-lg text-xs font-semibold uppercase transition-colors">Pesca</button>
+                    <button onclick="filterCategory('caza')" id="btn-caza" class="filter-btn bg-white text-brand-slate hover:bg-brand-olive hover:text-white px-4 py-2 rounded-lg text-xs font-semibold uppercase transition-colors">Caza & Óptica</button>
+                    <button onclick="filterCategory('cuchillos')" id="btn-cuchillos" class="filter-btn bg-white text-brand-slate hover:bg-brand-olive hover:text-white px-4 py-2 rounded-lg text-xs font-semibold uppercase transition-colors">Cuchillería</button>
+                    <button onclick="filterCategory('indumentaria')" id="btn-indumentaria" class="filter-btn bg-white text-brand-slate hover:bg-brand-olive hover:text-white px-4 py-2 rounded-lg text-xs font-semibold uppercase transition-colors">Camping & Indumentaria</button>
+                    <button onclick="filterCategory('ofertas')" id="btn-ofertas" class="filter-btn bg-white text-brand-slate hover:bg-brand-olive hover:text-white px-4 py-2 rounded-lg text-xs font-semibold uppercase transition-colors">Ofertas</button>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-semibold text-gray-600">
+                    <i class="fa-solid fa-sliders text-brand-orange"></i>
+                    <span>Modalidad:</span>
+                    <select id="modalidad-select" onchange="applySubfilter()" class="bg-white border border-gray-300 text-brand-slate rounded-lg px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-orange text-xs">
+                        <option value="all">Todas las Modalidades</option>
+                        <option value="spinning">Spinning / Baitcasting</option>
+                        <option value="optica">Óptica Táctica</option>
+                        <option value="supervivencia">Supervivencia / Monte</option>
+                        <option value="camping">Camping</option>
+                        <option value="indumentaria">Indumentaria</option>
+                        <option value="calzado">Calzado</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Products will be rendered dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- DETALLE DE FICHA DE PRODUCTO (MODAL PREVIEW) -->
+    <div id="product-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative my-8">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center z-10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modal-content" class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Dynamic Modal Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SOBRE NOSOTROS & COPYWRITING -->
+    <section id="nosotros" class="bg-brand-olive text-white py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-brand-orange uppercase text-xs font-bold tracking-widest">Nuestra Pasión</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading uppercase leading-tight">
+                    Nacidos para el monte, el río y la picada.
+                </h2>
+                <p class="text-gray-300 text-base leading-relaxed">
+                    En <strong>El Turco Pesca</strong>, no solo vendemos equipos; vivimos la misma pasión que vos. Fundada por pescadores deportivos y cazadores experimentados, nuestra misión es proveer herramientas confiables, duraderas y de alta tecnología para enfrentar cualquier terreno y clima.
+                </p>
+                <p class="text-gray-300 text-base leading-relaxed">
+                    Sabemos que un equipo fallido a 50 kilómetros del refugio no es una opción. Por eso seleccionamos cada marca, probamos cada caña y calibramos cada óptica bajo los estándares más exigentes del mercado.
+                </p>
+                <div class="pt-4 flex items-center gap-6">
+                    <div>
+                        <span class="block font-heading text-3xl font-bold text-brand-orange">+10</span>
+                        <span class="text-xs text-gray-400 uppercase">Años de Trayectoria</span>
+                    </div>
+                    <div class="border-l border-gray-600 pl-6">
+                        <span class="block font-heading text-3xl font-bold text-brand-orange">100%</span>
+                        <span class="text-xs text-gray-400 uppercase">Garantía Directa</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Naturaleza salvaje" class="rounded-2xl shadow-2xl w-full object-cover h-[420px]">
+                <div class="absolute -bottom-6 -left-6 bg-brand-orange text-white p-6 rounded-xl shadow-xl hidden sm:block max-w-xs">
+                    <p class="font-heading text-lg font-bold uppercase">"Donde la aventura se encuentra con la precisión."</p>
+                    <span class="text-xs text-orange-200 mt-1 block">— Slogan Oficial El Turco Pesca/span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="py-16 bg-brand-sand">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-brand-orange uppercase text-xs font-bold tracking-widest">Opiniones Reales</span>
+            <h2 class="text-3xl font-bold font-heading uppercase text-brand-slate mb-10">Lo que dicen los aventureros</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-left">
+                    <div class="flex text-amber-500 mb-3 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">"Compré la mira telescópica discovery 4-16x50. excelente asesoramiento  ."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-olive text-white flex items-center justify-center font-bold text-sm">GR</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-slate">Gonzalo Rodríguez</h4>
+                            <span class="text-xs text-gray-500">Cazador</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-left">
+                    <div class="flex text-amber-500 mb-3 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">"mucho stock mucha variedad. Recomendados 100%."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-earth text-white flex items-center justify-center font-bold text-sm">MB</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-slate">Martin Benítez</h4>
+                            <span class="text-xs text-gray-500">Pesca Deportiva Dorados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-left">
+                    <div class="flex text-amber-500 mb-3 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">"Excelente atención y stock real de cuchillería. El cuchillo de monte mantiene el filo impecable."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-slate text-white flex items-center justify-center font-bold text-sm">CL</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-slate">Carlos Larrea</h4>
+                            <span class="text-xs text-gray-500">Guía de Expedición</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-brand-slate text-gray-300 pt-12 pb-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-brand-orange text-white flex items-center justify-center rounded-lg font-bold text-xl">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <span class="font-heading text-xl font-bold uppercase text-white">El Turco Pesca</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                    Especialistas en equipamiento técnico de alta gama para pesca deportiva, óptica de precisión, cuchillería y vida al aire libre.
+                </p>
+                <div class="flex space-x-3 text-gray-400">
+                    <a href="#" class="w-8 h-8 rounded-full bg-brand-darkOlive flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-brand-darkOlive flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors"><i class="fa-brands fa-instagram text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-brand-darkOlive flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors"><i class="fa-brands fa-youtube text-xs"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-lg font-bold text-white uppercase mb-4 border-b border-gray-700 pb-2">Pesca Deportiva</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#catalogo" class="hover:text-brand-orange transition-colors">Cañas Spinning & Baitcasting</a></li>
+                    <li><a href="#catalogo" class="hover:text-brand-orange transition-colors">Reeles Frontales y Rotativos</a></li>
+                    <li><a href="#catalogo" class="hover:text-brand-orange transition-colors">Líneas y Multifilamentos</a></li>
+                    <li><a href="#catalogo" class="hover:text-brand-orange transition-colors">Señuelos de Agua Dulce </a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-lg font-bold text-white uppercase mb-4 border-b border-gray-700 pb-2">Caza & Óptica</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#catalogo" class="hover:text-brand-orange transition-colors">Rifles,Resorteros, Nitro piston, co2, PCP ,Miras Telescópicas</a></li>
+                    <li><a href="#catalogo" class="hover:text-brand-orange transition-colors">Binoculares y Telémetros</a></li>
+                    <li><a href="#catalogo" class="hover:text-brand-orange transition-colors">Cuchillería </a></li>
+                    <li><a href="#catalogo" class="hover:text-brand-orange transition-colors">Mochilas & bolsos Tácticas</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-lg font-bold text-white uppercase mb-4 border-b border-gray-700 pb-2">Atención al Cliente</h4>
+                <div class="space-y-3 text-xs">
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-orange"></i> </p>
+                    <p class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-green-400"></i> +54 9 341 2126340</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-orange"></i> gabriel.alod@gmail.com</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-orange"></i> Av. Alberdi 1057, Pueblo Esther, Argentina</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-gray-800 text-center text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 EL Turco Pesca. Todos los derechos reservados.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:underline">Términos y Condiciones</a>
+                <a href="#" class="hover:underline">Políticas de Privacidad</a>
+                <a href="#" class="hover:underline">Defensa del Consumidor</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/5493412126340?text=Hola,%20quisiera%20recibir%20asesoramiento%20t%C3%A9cnico" target="_blank" class="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl flex items-center justify-center transition-all transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- CART SIDEBAR MODAL -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex justify-end">
+        <div class="bg-white w-full max-w-md h-full flex flex-col justify-between shadow-2xl">
+            <div class="p-6 bg-brand-olive text-white flex justify-between items-center">
+                <h3 class="font-heading text-xl font-bold uppercase"><i class="fa-solid fa-cart-shopping mr-2"></i> Tu Carrito</h3>
+                <button onclick="toggleCartModal()" class="text-white hover:text-brand-orange text-xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div id="cart-items" class="p-6 overflow-y-auto flex-grow space-y-4">
+                <p class="text-gray-500 text-center py-8">Tu carrito está vacío actualmente.</p>
+            </div>
+
+            <div class="p-6 bg-brand-sand border-t border-gray-200 space-y-4">
+                <div class="flex justify-between font-bold text-lg text-brand-slate">
+                    <span>Total:</span>
+                    <span id="cart-total">$0</span>
+                </div>
+                <button onclick="checkoutCart()" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-white font-bold py-3 rounded-lg uppercase tracking-wider text-sm transition-colors">
+                    Finalizar Compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lógica de catálogo, filtros y carrito -->
+    <script src="js/main.js"></script>
+</body>
+</html>

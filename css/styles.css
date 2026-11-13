@@ -1,0 +1,34 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+    font-family: 'Oswald', sans-serif;
+}
+
+.bg-hero {
+    background:
+        linear-gradient(rgba(30, 34, 41, 0.75), rgba(45, 56, 43, 0.85)),
+        url('../imagenes/turco.jpg') center/cover no-repeat;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E2229;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #594A3C;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF6B00;
+}
