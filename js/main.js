@@ -1569,7 +1569,7 @@ function openProductModal(id) {
             </div>
             <div class="mt-8 space-y-3">
                 ${cartButton}
-                <a href="https://wa.me/5491100000000?text=Hola,%20tengo%20consultas%20sobre%20el%20producto:%20${encodeURIComponent(prod.title)}" target="_blank" class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-bold py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
+                <a href="https://wa.me/5493412126340?text=Hola,%20tengo%20consultas%20sobre%20el%20producto:%20${encodeURIComponent(prod.title)}" target="_blank" class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-bold py-2.5 rounded-lg text-xs flex items-center justify-center gap-2">
                     <i class="fa-brands fa-whatsapp text-green-500 text-base"></i> Consultar a un especialista
                 </a>
             </div>
